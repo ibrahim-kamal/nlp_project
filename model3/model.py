@@ -25,11 +25,7 @@ def truncated_loss(y_true, y_pred):
     return K.mean(loss, axis=-1)
 
 
-def seq2seq(hidden_size, nb_input_chars, nb_target_chars):
-    """Adapted from:
-    https://github.com/keras-team/keras/blob/master/examples/lstm_seq2seq.py
-    """
-    
+def seq2seq(hidden_size, nb_input_chars, nb_target_chars):   
     # Define the main model consisting of encoder and decoder.
     encoder_inputs = Input(shape=(None, nb_input_chars),
                            name='encoder_data')
